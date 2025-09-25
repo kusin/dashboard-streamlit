@@ -49,3 +49,6 @@
 - Keras 2.14.0
 - Scikeras 0.12.0
 
+## List of Data Visualization with Framework Streamlit
+- Video Game Sales
+- Nike Sales
