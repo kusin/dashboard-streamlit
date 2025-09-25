@@ -1,11 +1,11 @@
 # library ui-dashboard
-import streamlit as st;
+import streamlit as st
 
 # library manipulation array
-import numpy as np;
+import numpy as np
 
 # library manipulation dataset
-import pandas as pd;
+import pandas as pd
 
 ## library data visualization
 import seaborn as sns
@@ -72,24 +72,55 @@ with st.container():
     with col1: # Barplot for Best game-name in each region
         st.error("Best game-name in each region")
         st.plotly_chart(barplot(
-            data=df_name, x="Name", y="Global_Sales", title="Top 4 games based on global sales", x_title="Game Name", y_title="Sum of Global Sales"
-        ))
+            data=df_name, x="Name", y="Global_Sales", title="Top 4 games based on global sales",
+        ), use_container_width=True)
     
     with col2: # Barplot for Best platform in each region
         st.error("Best platform in each region")
         st.plotly_chart(barplot(
-            data=df_platform, x="Platform", y="Global_Sales", title="Top 4 platform based on global sales", x_title="Platform Name", y_title="Sum of Global Sales"
-        ))
+            data=df_platform, x="Platform", y="Global_Sales", title="Top 4 platform based on global sales",
+        ), use_container_width=True)
 
     with col1: # Barplot for Best genre in each region
         st.error("Best genre in each region")
         st.plotly_chart(barplot(
-            data=df_genre, x="Genre", y="Global_Sales", title="Top 4 genre based on global sales", x_title="Genre Name", y_title="Sum of Global Sales"
-        ))
+            data=df_genre, x="Genre", y="Global_Sales", title="Top 4 genre based on global sales",
+        ), use_container_width=True)
 
     with col2: # Barplot for Best publisher in each region
         st.error("Best publisher in each region")
         st.plotly_chart(barplot(
-            data=df_publisher, x="Publisher", y="Global_Sales", title="Top 4 publisher based on global sales", x_title="Publisher Name", y_title="Sum of Global Sales"
-        ))
-    st.success("")
+            data=df_publisher, x="Publisher", y="Global_Sales", title="Top 4 publisher based on global sales",
+        ), use_container_width=True)
+        
+# container-body
+st.success("")
+with st.container():
+
+    # create two columns
+    col1, col2 = st.columns(2, gap="medium")
+
+    with col1: # Barplot for Best game-name in each region
+        st.error("Best game-name in each region")
+        st.plotly_chart(grouped_barplot(
+            data=unpivot_sales(df_name, "Name"), x="Name", y="Sales", title="Top 4 games based on global sales"
+        ), use_container_width=True)
+    
+    with col2: # Barplot for Best platform in each region
+        st.error("Best platform in each region")
+        st.plotly_chart(grouped_barplot(
+            data=unpivot_sales(df_platform, "Platform"), x="Platform", y="Sales", title="Top 4 platform based on global sales"
+        ), use_container_width=True)
+    
+    with col1: # Barplot for Best genre in each region
+        st.error("Best genre in each region")
+        st.plotly_chart(grouped_barplot(
+            data=unpivot_sales(df_genre, "Genre"), x="Genre", y="Sales", title="Top 4 genre based on global sales"
+        ), use_container_width=True)
+
+    with col2: # Barplot for Best publisher in each region
+        st.error("Best publisher in each region")
+        st.plotly_chart(grouped_barplot(
+            data=unpivot_sales(df_publisher, "Publisher"), x="Publisher", y="Sales", title="Top 4 publiser based on global sales"
+        ), use_container_width=True)
+

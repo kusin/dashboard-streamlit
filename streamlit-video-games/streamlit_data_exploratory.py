@@ -1,11 +1,11 @@
 # library ui-dashboard
-import streamlit as st;
+import streamlit as st
 
 # library manipulation dataset
-import pandas as pd;
+import pandas as pd
 
 # library manipulation array
-import numpy as np;
+import numpy as np
 
 # define function
 def get_dataset():
@@ -27,3 +27,15 @@ def grouping_sales(dataset, columns):
 
     # return values
     return df
+
+# define function
+def unpivot_sales(dataset, columns):
+
+  # process unpivot
+  df = pd.melt(
+    frame=dataset, id_vars=[columns], var_name='Region', value_name='Sales',
+    value_vars=['NA_Sales', 'EU_Sales', 'JP_Sales', 'Other_Sales']
+  )
+  
+  # return values
+  return df

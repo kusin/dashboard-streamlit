@@ -1,7 +1,7 @@
 ## Hardware Testing
 - HP Omen 15-en0044AX 2020
-- Processor AMD R9 4900H
-- RAM DDR4 3200 MHz
+- Processor AMD Ryzen 9 4900H
+- RAM DDR4 16GB 3200 MHz
 - SSD NVMe 1TB gen3
 - VGA RTX 2060 GDDR6 6GB
 - Resolution 15.6 inch on 1920px x 1080px
@@ -9,7 +9,7 @@
 ## Hardware Testing
 - HP 14-ep0002tu 2023
 - Processor Intel i5-1335U
-- RAM DDR4 3200 MHz
+- RAM DDR4 16GB 3200 MHz
 - SSD NVMe 512GB gen4
 - iGPU Iris(R) Xe Graphics 128MB
 - Resolution 14 inch on 1920px x 1080px
@@ -17,9 +17,17 @@
 ## Hardware Testing
 - Lenovo LOQ 15IRX9 2024
 - Processor Intel i5-13450HX,
-- RAM DDR5 4800 MTs
+- RAM DDR5 32GB 4800 MTs
 - SSD NVMe 512GB gen4
 - VGA RTX 4050 GDDR6 6GB
+- Resolution 15.6 inch on 1920px x 1080px
+
+## Hardware Testing
+- HP Omen 16-ap0776ax 2025
+- Processor AMD Ryzen Ai 7 350
+- RAM DDR5 32GB 5600 MTs
+- SSD NVMe 1TB gen4
+- VGA RTX 5060 GDDR7 8GB
 - Resolution 15.6 inch on 1920px x 1080px
 
 ## Software Requirements
